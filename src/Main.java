@@ -5,6 +5,11 @@ public class Main {
 
         for (Animal a : animals) {
             a.makeSound();  // Dog→Woof!, Cat→Meow! が出るはず
+
+            if(a instanceof Walkable) {
+                ((Walkable) a).walk();
+            }
+
         }
     }
 }
