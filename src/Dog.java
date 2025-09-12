@@ -1,13 +1,5 @@
-// Dog.java
-public class Dog extends Animal implements Walkable {
-    @Override
-    public void makeSound() {
-        System.out.println("Woof! Woof!");
+public class Dog extends Animal {
+    public Dog() {
+        this.soundBehavior = new DogSound(); // 鳴き方を設定
     }
-
-    @Override
-    public void walk(){
-        System.out.println("Dog is Walking...");
-    }
-
 }

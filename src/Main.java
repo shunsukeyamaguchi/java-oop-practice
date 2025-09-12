@@ -1,15 +1,12 @@
-// Main.java
 public class Main {
     public static void main(String[] args) {
-        Animal[] animals = { new Dog(), new Cat() };
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        Animal silentDog = new Dog();
+        silentDog.soundBehavior = new SilentSound(); // 鳴き方を差し替え
 
-        for (Animal a : animals) {
-            a.makeSound();  // Dog→Woof!, Cat→Meow! が出るはず
-
-            if(a instanceof Walkable) {
-                ((Walkable) a).walk();
-            }
-
-        }
+        dog.performSound();     // Woof! Woof!
+        cat.performSound();     // Meow! Meow!
+        silentDog.performSound(); // ...
     }
 }

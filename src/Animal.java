@@ -1,6 +1,7 @@
-// Animal.java
 public abstract class Animal {
-    public void makeSound() {
-        System.out.println("Some sound...");
+    protected SoundBehavior soundBehavior;
+
+    public void performSound() {
+        soundBehavior.makeSound();
     }
 }
